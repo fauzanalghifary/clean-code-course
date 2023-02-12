@@ -24,3 +24,30 @@
   - maximum cohesion (a highly cohesive object)
   - no cohesion (data container with utility methods)
 - Goals => highly cohesive classes
+
+## The Law of "Demeter" ==> "Tell", not "Ask"
+
+- Principle of Least Knowledge: Don't depend on internals strangers (other object you don't directly know)
+
+```js
+this.customer.lastPurchase.date;
+```
+
+- only access direct internals of
+  - the object it belongs to
+  - object that are stored in properties of that object
+  - object which are received as method parameters
+  - object which are created in the method
+
+## SOLID Principles
+
+- Single Responsibility Principle
+- Open-Closed Principle
+  - open for extension, but close for modification
+  - this will ensure small class and can help to stay DRY
+- Liskov Substitution Principle
+  - Objects should be replaceable with instances of their subclasses without altering their behaviour
+- Interface Segregation Principle
+  - many client-specific are better than one general purpose interface
+- Dependency Inversion Principle
+  - you should depend upon abstractions, not concretions
